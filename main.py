@@ -9,6 +9,8 @@ print('Software de cadastro feito por João Vitor Waldrich versão Beta 1.0')
 
 # - Instanciando a função Cadastro
 empresa_cadastro = input('Digite o arquivo de cadastro .csv que você deseja manipular\n> ').upper()
+if empresa_cadastro == '':
+    empresa_cadastro = 'ENTRA21'
 try:
     df = Cadastro(empresa_cadastro, True)
 except FileNotFoundError:
